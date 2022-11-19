@@ -22,13 +22,13 @@ export class Consulta extends Entity {
   consulta: string;
 
   @property({
-    type: 'date',
+    type: 'string',
     required: true,
   })
   fechaInicio: string;
 
   @property({
-    type: 'date',
+    type: 'string',
     required: true,
   })
   fechaFinal: string;
@@ -40,16 +40,16 @@ export class Consulta extends Entity {
   departamentoContrato: string;
 
   @property({
-    type: 'date',
+    type: 'string',
     required: true,
   })
   fechaConsulta: string;
 
   @property({
-    type: 'number',
+    type: 'string',
     required: true,
   })
-  idUsuario: number;
+  idUsuario: string;
 
   // Define well-known properties here
 

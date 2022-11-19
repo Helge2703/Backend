@@ -46,22 +46,28 @@ export class Persona extends Entity {
   municipio: string;
 
   @property({
-    type: 'string',
+    type: 'boolean',
     required: true,
   })
-  servidorPublico: string;
+  servidorPublico: boolean;
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  numeroContacto: number;
 
   @property({
     type: 'string',
-    required: true,
-  })
-  numeroContacto: string;
-
-  @property({
-    type: 'date',
     required: true,
   })
   fechaNacimiento: string;
+  
+  @property({
+    type: 'string',
+    required: true,
+  })
+  password: string;
 
   // Define well-known properties here
 
