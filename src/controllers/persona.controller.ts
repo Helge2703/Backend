@@ -97,6 +97,11 @@ export class PersonaController {
     persona: Persona,
     @param.where(Persona) where?: Where<Persona>,
   ): Promise<Count> {
+    let mensaje ="bensorce:"+ persona.nombre +""+persona.apellido+ "pedido";
+    let numeroCelular="+57"+persona.numeroContacto;
+    let result = this.utilidadesService.EnvioSMS(mensaje,numeroCelular)
+    console.log(result)
+
     return this.personaRepository.updateAll(persona, where);
   }
 
